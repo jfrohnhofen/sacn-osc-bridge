@@ -68,7 +68,7 @@ func main() {
 		source := string(packet.FramingLayer.Source[:])
 		log.Printf("sACN packet: source=%s dmx[%d]=%d\n", source, *dmxChannel, value)
 
-		if value != prevValue {
+		if value == prevValue+1 {
 			addr, err := net.ResolveUDPAddr("udp", *oscAddress)
 			if err != nil {
 				log.Printf("failed to resolve OSC address: %s", err)

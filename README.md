@@ -1,7 +1,7 @@
 # sACN-to-OSC Bridge
 
 This is a very simple sACN to OpenSoundControl (OSC) bridge, that receives sACN broadcast messages for a single sACN universe,
-extracts the DMX value of a single channel in that universe, and sends a OSC command whenever the DMX value changes.
+extracts the DMX value of a single channel in that universe, and sends a OSC command whenever the DMX value changes from N to N+1.
 
 ## Command-line options
 
